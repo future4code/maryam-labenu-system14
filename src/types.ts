@@ -4,7 +4,7 @@ export type Turma = {
     nome: string
     docentes: string
     estudantes: string
-    modulo: number
+    modulo: string
   };
 
 export type Estudante = {
