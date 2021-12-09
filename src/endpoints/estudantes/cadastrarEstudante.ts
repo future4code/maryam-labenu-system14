@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import moment from "moment";
-import { connection } from "../connection";
-import { Estudante } from "../types";
+import { connection } from "../../connection";
+import { Estudante } from "../../types";
 
 export const cadastrarEstudante  = async (req:Request, res: Response) => {
     try {

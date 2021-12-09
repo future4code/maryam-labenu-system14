@@ -1,6 +1,6 @@
 import {Request, Response} from "express"
-import { connection } from "../connection";
-import { Docente } from "../types";
+import { connection } from "../../connection";
+import { Docente } from "../../types";
 
 export const cadastrarDocente = async (req:Request, res: Response) => {
     try {
