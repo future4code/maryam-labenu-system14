@@ -1,24 +1,20 @@
 import {Request, Response} from "express";
 import moment from "moment";
-import { dadosEstudante } from "../data/dadosEstudante";
+import { dadosDocente } from "../data/data_docentes/dadosDocente";
 
 
 
-export const buscarEstudante = async (req:Request, res: Response) => {
+export const buscarDocente = async (req:Request, res: Response) => {
     try {
 
-        if(!req.query.nome){
-            throw new Error("Insira o nome do estudante!")
-        }
-       
-        const estudante = await dadosEstudante(req.query.nome)
-        console.log(estudante)
+        const docentes = await dadosDocente()
+        console.log(docentes)
         res.status(200) .send({
-            ...estudante,
-            data_nasc: moment(estudante.data_nasc, "YYYY-MM-DD").format("DD/MM/YYYY")
+            ...docentes,
+            data_nasc: moment(docentes.data_nasc, "YYYY-MM-DD").format("DD/MM/YYYY")
         })
 
-        if(!estudante){
+        if(!docentes){
             throw new Error("Estudante não encontrado!")
         }
        

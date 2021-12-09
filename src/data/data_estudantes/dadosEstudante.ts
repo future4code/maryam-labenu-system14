@@ -1,4 +1,4 @@
-import { connection } from "../connection";
+import { connection } from "../../connection";
 
 
 export const dadosEstudante = async (nome:any): Promise <any> =>{

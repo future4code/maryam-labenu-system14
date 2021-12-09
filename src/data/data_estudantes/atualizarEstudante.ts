@@ -1,4 +1,4 @@
-import { connection } from "../connection";
+import { connection } from "../../connection";
 
 export const atualizarEstudante = async (id:string, turma_id:string):Promise<any> => {
     if(turma_id){
