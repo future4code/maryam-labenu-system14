@@ -1,13 +1,7 @@
 import {Request, Response} from "express"
 import { connection } from "../connection";
+import { Turma } from "../types";
 
-type Turma = {
-  id: string
-  nome: string
-  docentes: string
-  estudantes: string
-  modulo: number
-}
 
 export const criarTurma = async (req: Request, res: Response) => {
   try {
