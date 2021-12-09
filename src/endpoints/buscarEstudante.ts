@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
 import moment from "moment";
-import { dadosEstudante } from "../data/dadosEstudante";
+import { dadosEstudante } from "../data/data_estudantes/dadosEstudante";
 
 
 

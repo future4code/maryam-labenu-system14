@@ -5,6 +5,8 @@ import { buscarEstudante } from "./endpoints/buscarEstudante";
 import { criarTurma } from "./endpoints/criarTurma";
 import { testeInicial } from "./endpoints/testeInicial";
 import { mudarEstudante } from "./endpoints/mudarEstudante";
+import { buscarDocente } from "./endpoints/buscarDocentes";
+import { mudarDocente } from "./endpoints/mudarDocente";
 
 app.get("/", testeInicial)
 
@@ -22,6 +24,7 @@ app.put("/estudantes/:id", mudarEstudante)
 
 
 app.put("/docentes", cadastrarDocente)
-// app.get("/docentes", buscarDocente)
+app.get("/docentes", buscarDocente)
+app.put("/docentes/:id", mudarDocente)
 
 
