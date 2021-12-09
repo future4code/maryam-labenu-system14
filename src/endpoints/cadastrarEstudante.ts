@@ -1,4 +1,5 @@
-import {Request, Response} from "express"
+import {Request, Response} from "express";
+import moment from "moment";
 import { connection } from "../connection";
 import { Estudante } from "../types";
 
@@ -14,7 +15,7 @@ export const cadastrarEstudante  = async (req:Request, res: Response) => {
             id: Date.now().toString(),
             nome,
             email,
-            data_nasc,
+            data_nasc: moment(data_nasc, "DD/MM/YYYY").format("YYYY-MM-DD"),
             turma_id
         }
 
