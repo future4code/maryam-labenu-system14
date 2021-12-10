@@ -12,7 +12,6 @@ export const buscarEstudante = async (req:Request, res: Response) => {
         }
        
         const estudante = await dadosEstudante(req.query.nome)
-        console.log(estudante)
         res.status(200) .send({
             ...estudante,
             data_nasc: moment(estudante.data_nasc, "YYYY-MM-DD").format("DD/MM/YYYY")
@@ -23,7 +22,6 @@ export const buscarEstudante = async (req:Request, res: Response) => {
         }
        
     } catch (error:any) {
-        console.log(error)
         res.status(400).send(error.message || error.sqlMessage)
     }
 

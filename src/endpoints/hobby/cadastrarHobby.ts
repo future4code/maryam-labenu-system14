@@ -18,7 +18,6 @@ export const cadastrarHobby = async (req:Request, res:Response) => {
         res.status(200).send("Hobby cadastrado com sucesso!")
 
     } catch (error:any) {
-        console.log(error)
         res.status(400).send({message: error.message})
     }
 

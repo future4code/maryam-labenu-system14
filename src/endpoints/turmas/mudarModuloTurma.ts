@@ -15,7 +15,6 @@ export const mudarModuloTurma = async (req:Request, res: Response): Promise <any
             res.status(200) .send("Módulo atualizado")
 
         } catch (error:any) {
-            console.log(error);
             res.status(400).send(error.message || error.sqlMessage)
 
         }
