@@ -1,7 +1,8 @@
 import { connection } from "../../connection";
+import { Docente } from "../../types";
 
 export const dadosDocente = async ():Promise <any> => {
-    const result = await connection("labesystem_docente")
+    const docentes:Docente[] = await connection("labesystem_docente")
     .select("*")
-    return result[0]
+    return docentes
 }
