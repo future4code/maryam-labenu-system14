@@ -22,3 +22,14 @@ export type Estudante = {
     data_nasc: string
     turma_id: string
   };
+
+  export type Hobby = {
+    id:string
+    nome: string
+  };
+
+  export type HobbyEstudante = {
+    id: string
+    estudante_id: string
+    hobby_id: string
+  }

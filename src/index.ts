@@ -9,19 +9,38 @@ import { buscarDocente } from "./endpoints/docentes/buscarDocentes";
 import { mudarDocente } from "./endpoints/docentes/mudarDocente";
 import { pegarTurma } from "./endpoints/turmas/pegarTurma";
 import { mudarModuloTurma } from "./endpoints/turmas/mudarModuloTurma";
+import { cadastrarHobby } from "./endpoints/hobby/cadastrarHobby";
+import { cadastrarHobbyEstudante } from "./endpoints/hobby/cadastrarHobbyEstudante";
+import { buscarHobby } from "./endpoints/hobby/buscarHobby";
+import { buscarTodosEstudantes } from "./endpoints/estudantes/buscarTodosEstudantes";
 
 app.get("/", testeInicial)
+//endpoints para Turma
 
 app.post("/turma", criarTurma)
 app.get("/turma", pegarTurma)
 app.put("/turma/:id", mudarModuloTurma)
 
+//endpoints para Estudantes
 
 app.put("/estudantes", cadastrarEstudante)
 app.get("/estudantes", buscarEstudante)
+app.get("/todosEstudantes", buscarTodosEstudantes)
 app.put("/estudantes/:id", mudarEstudante)
 
+
+//endpoints para Hobby
+
+app.put("/hobby", cadastrarHobby) // para cadastrar hobby
+app.put("/estudante/hobby", cadastrarHobbyEstudante) // para cadastrar hobby por estudante
+app.get("/hobby", buscarHobby)
+
+
+//endpoints para Docentes
 
 app.put("/docentes", cadastrarDocente)
 app.get("/docentes", buscarDocente)
 app.put("/docentes/:id", mudarDocente)
+
+
+
