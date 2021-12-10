@@ -8,21 +8,18 @@ import { mudarEstudante } from "./endpoints/estudantes/mudarEstudante";
 import { buscarDocente } from "./endpoints/docentes/buscarDocentes";
 import { mudarDocente } from "./endpoints/docentes/mudarDocente";
 import { pegarTurma } from "./endpoints/turmas/pegarTurma";
+import { mudarModuloTurma } from "./endpoints/turmas/mudarModuloTurma";
 
 app.get("/", testeInicial)
 
 app.post("/turma", criarTurma)
 app.get("/turma", pegarTurma)
-
-
-
+app.put("/turma/:id", mudarModuloTurma)
 
 
 app.put("/estudantes", cadastrarEstudante)
 app.get("/estudantes", buscarEstudante)
 app.put("/estudantes/:id", mudarEstudante)
-
-
 
 
 app.put("/docentes", cadastrarDocente)
