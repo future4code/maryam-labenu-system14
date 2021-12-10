@@ -5,9 +5,9 @@ import { Turma } from "../../types";
 
 export const criarTurma = async (req: Request, res: Response) => {
   try {
-    const {nome, docentes, estudantes, modulo} =req.body;
+    const {nome, modulo} = req.body;
 
-    if (!nome || !docentes || !estudantes || !modulo){
+    if (!nome || !modulo){
       throw new Error("Está faltando informaçōes.");
 
     }
@@ -15,8 +15,6 @@ export const criarTurma = async (req: Request, res: Response) => {
     const turma:Turma = {
       id:Date.now().toString(),
       nome,
-      docentes,
-      estudantes,
       modulo,
     }
 
