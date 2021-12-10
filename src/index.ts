@@ -13,6 +13,9 @@ import { cadastrarHobby } from "./endpoints/hobby/cadastrarHobby";
 import { cadastrarHobbyEstudante } from "./endpoints/hobby/cadastrarHobbyEstudante";
 import { buscarHobby } from "./endpoints/hobby/buscarHobby";
 import { buscarTodosEstudantes } from "./endpoints/estudantes/buscarTodosEstudantes";
+import { cadastrarEspecialidadeDocentes } from "./endpoints/especialidades/cadastrarEspecialidadesDocentes";
+import { buscarEspecialidades } from "./endpoints/especialidades/buscarEspecialidades";
+import { cadastrarEspecialidades } from "./endpoints/especialidades/cadastrarEspecialidades";
 
 app.get("/", testeInicial)
 //endpoints para Turma
@@ -43,4 +46,8 @@ app.get("/docentes", buscarDocente)
 app.put("/docentes/:id", mudarDocente)
 
 
+//endpoints para Especialidades
 
+app.put("/especialidade/:id", cadastrarEspecialidades) // para cadastrar hobby
+app.put("/docente/especialidade", cadastrarEspecialidadeDocentes) // para cadastrar hobby por estudante
+app.get("/especialidade", buscarEspecialidades)

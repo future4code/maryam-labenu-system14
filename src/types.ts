@@ -33,3 +33,14 @@ export type Estudante = {
     estudante_id: string
     hobby_id: string
   }
+
+  export type Especialidades = {
+    id:string
+    nome: string
+  };
+
+  export type EspecialidadesDocentes = {
+    id: string
+    docente_id: string
+    especialidade_id: string
+  }
