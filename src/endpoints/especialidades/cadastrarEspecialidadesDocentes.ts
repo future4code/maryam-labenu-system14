@@ -10,18 +10,17 @@ export const cadastrarEspecialidadeDocentes = async (req:Request, res:Response) 
             throw new Error("Está faltando informações!")
         }
 
-        const hobbies:EspecialidadesDocentes = {
+        const especialidade:EspecialidadesDocentes = {
             id: Date.now().toString(),
             docente_id,
             especialidade_id
         }
         await connection("labesystem_docente_especialidade")
-        .insert(hobbies)
+        .insert(especialidade)
         res.status(200).send("A especialidade do docente foi cadastrada!")
 
 
     } catch (error:any) {
-        console.log(error)
         res.status(400).send({message: error.message})
     }
 }

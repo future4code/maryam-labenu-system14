@@ -26,28 +26,28 @@ app.put("/turma/:id", mudarModuloTurma)
 
 //endpoints para Estudantes
 
-app.put("/estudantes", cadastrarEstudante)
-app.get("/estudantes", buscarEstudante)
+app.post("/estudantes", cadastrarEstudante)
+app.get("/estudantes", buscarEstudante) //para buscar estudante por nome
 app.get("/todosEstudantes", buscarTodosEstudantes)
-app.put("/estudantes/:id", mudarEstudante)
+app.post("/estudantes/:id", mudarEstudante)
 
 
 //endpoints para Hobby
 
-app.put("/hobby", cadastrarHobby) // para cadastrar hobby
-app.put("/estudante/hobby", cadastrarHobbyEstudante) // para cadastrar hobby por estudante
+app.post("/hobby", cadastrarHobby) // para cadastrar hobby
+app.post("/estudante/hobby", cadastrarHobbyEstudante) // para cadastrar hobby por estudante
 app.get("/hobby", buscarHobby)
 
 
 //endpoints para Docentes
 
-app.put("/docentes", cadastrarDocente)
+app.post("/docentes", cadastrarDocente)
 app.get("/docentes", buscarDocente)
 app.put("/docentes/:id", mudarDocente)
 
 
 //endpoints para Especialidades
 
-app.put("/especialidade/:id", cadastrarEspecialidades) // para cadastrar hobby
-app.put("/docente/especialidade", cadastrarEspecialidadeDocentes) // para cadastrar hobby por estudante
+app.post("/especialidade", cadastrarEspecialidades) // para cadastrar especialidade
+app.put("/docente/especialidade", cadastrarEspecialidadeDocentes) // para cadastrar especialidade por docente
 app.get("/especialidade", buscarEspecialidades)
